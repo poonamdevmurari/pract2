@@ -1,6 +1,7 @@
 package com.example.tatvasofttasktwo.data.network
 
 import com.example.tatvasofttasktwo.data.model.User
+import com.example.tatvasofttasktwo.data.model.UserResponse
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
@@ -12,7 +13,7 @@ import retrofit2.http.GET
 interface RetrofitService {
 
     @GET("api/users")
-    fun getUserList() : Call<List<User>>
+    fun getUserList() : Call<UserResponse>
 
     companion object {
         var retrofitService:RetrofitService? = null
